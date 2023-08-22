@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:sizzle_starter/src/core/utils/logger.dart';
-import 'package:sizzle_starter/src/feature/app/logic/app_runner.dart';
-import 'package:sizzle_starter/src/feature/initialization/logic/initialization_processor.dart';
-import 'package:sizzle_starter/src/feature/initialization/model/dependencies.dart';
-import 'package:sizzle_starter/src/feature/initialization/model/initialization_hook.dart';
+import 'package:sport_quiz/src/core/utils/logger.dart';
+import 'package:sport_quiz/src/feature/app/logic/app_runner.dart';
+import 'package:sport_quiz/src/feature/initialization/logic/initialization_processor.dart';
+import 'package:sport_quiz/src/feature/initialization/model/dependencies.dart';
+import 'package:sport_quiz/src/feature/initialization/model/initialization_hook.dart';
 
 void main() {
   final hook = InitializationHook.setup(

@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:sizzle_starter/src/core/localization/app_localization.dart';
+import 'package:sport_quiz/src/core/localization/app_localization.dart';
 
 extension LocalizationX on BuildContext {
   GeneratedLocalization stringOf() =>

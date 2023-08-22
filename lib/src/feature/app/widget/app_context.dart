@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sizzle_starter/src/core/localization/app_localization.dart';
-import 'package:sizzle_starter/src/core/theme/theme.dart';
-import 'package:sizzle_starter/src/feature/sample/widget/sample_screen.dart';
+import 'package:sport_quiz/src/core/localization/app_localization.dart';
+import 'package:sport_quiz/src/core/theme/theme.dart';
+
+import '../../../core/router/router.dart';
 
 /// A widget which is responsible for providing the app context.
 class AppContext extends StatefulWidget {
@@ -19,6 +20,6 @@ class _AppContextState extends State<AppContext> {
         theme: $lightThemeData,
         darkTheme: $darkThemeData,
         locale: const Locale('en'),
-        home: const SampleScreen(),
+        onGenerateRoute: AppRoutes.onGenerateRoutes,
       );
 }

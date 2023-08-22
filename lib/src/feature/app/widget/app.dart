@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
-import 'package:sizzle_starter/src/core/widget/scope_widgets.dart';
-import 'package:sizzle_starter/src/feature/app/widget/app_context.dart';
-import 'package:sizzle_starter/src/feature/initialization/model/dependencies.dart';
-import 'package:sizzle_starter/src/feature/initialization/widget/dependencies_scope.dart';
+import 'package:sport_quiz/src/core/widget/scope_widgets.dart';
+import 'package:sport_quiz/src/feature/app/widget/app_context.dart';
+import 'package:sport_quiz/src/feature/initialization/model/dependencies.dart';
+import 'package:sport_quiz/src/feature/initialization/widget/dependencies_scope.dart';
 
 /// A widget which is responsible for running the app.
 class App extends StatelessWidget {
@@ -12,12 +11,7 @@ class App extends StatelessWidget {
     super.key,
   });
 
-  void run() => runApp(
-        DefaultAssetBundle(
-          bundle: SentryAssetBundle(),
-          child: this,
-        ),
-      );
+  void run() => runApp(this);
 
   final InitializationResult result;
 

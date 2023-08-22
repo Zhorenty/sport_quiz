@@ -1,4 +1,4 @@
-name: sizzle_starter
+name: sport_quiz
 description: >
   Highly scalable Flutter starter kit, designed with an optimal predefined structure 
   and inclusive of libraries that are widely applicable in numerous use cases.
@@ -41,18 +41,26 @@ dependencies:
   logging: 1.2.0
 
   # Utils
+  device_info_plus: ^8.0.0
   pure: 0.2.0
   platform_info: 4.0.2
   bloc_concurrency: 0.2.2
   path: 1.8.3
   path_provider: 2.0.15
 
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+
   # Codegen
   build_runner: ^2.4.6
+  freezed: ^2.4.1
+  freezed_annotation: ^2.4.1
+  hive_generator: ^2.0.1
+  firebase_remote_config: ^4.2.5
+  connectivity_plus: ^4.0.2
+  webview_flutter: ^3.0.4
 
-  # Packages
-  # database:
-  #   path: packages/database
 
 dev_dependencies:
   # Testing

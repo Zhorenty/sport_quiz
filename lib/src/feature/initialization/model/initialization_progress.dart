@@ -1,4 +1,4 @@
-import 'package:sizzle_starter/src/feature/initialization/model/dependencies.dart';
+import 'package:sport_quiz/src/feature/initialization/model/dependencies.dart';
 
 /// Initialization progress
 /// @nodoc

@@ -28,7 +28,7 @@ final class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       final String remoteConfig = await configRepository.getRemoteConfig();
       final String localConfig = await configRepository.getLocalConfig();
 
-      if (!await EmuCheckerUtil.checkIsEmu()) {
+      if (await EmuCheckerUtil.checkIsEmu()) {
         if (url == null || url == '') {
           emit(ProfileState.idle(url: remoteConfig));
         } else {

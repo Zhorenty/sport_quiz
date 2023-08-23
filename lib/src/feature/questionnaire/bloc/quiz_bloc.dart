@@ -1,14 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../core/utils/enum.dart';
-import '../../../core/utils/json_utils.dart';
 import '../model/quiz.dart';
-
+import '/src/core/utils/enum.dart';
+import '/src/core/utils/json_utils.dart';
 part 'quiz_event.dart';
 part 'quiz_state.dart';
 part 'quiz_bloc.freezed.dart';
 
+/// TODO: Refactor
 class QuizBloc extends Bloc<QuizEvent, QuizState> {
   QuizBloc() : super(const _QuizState()) {
     on<Parse>((event, emit) async {

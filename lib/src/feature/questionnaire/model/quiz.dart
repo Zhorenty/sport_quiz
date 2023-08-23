@@ -9,5 +9,6 @@ class Quiz with _$Quiz {
     required List<String> answers,
     required String correctAnswer,
   }) = _Quiz;
+
   factory Quiz.fromJson(Map<String, dynamic> json) => _$QuizFromJson(json);
 }

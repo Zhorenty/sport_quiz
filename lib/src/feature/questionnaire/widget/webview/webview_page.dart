@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewScreen extends StatefulWidget {
-  const WebViewScreen({Key? key, required this.url}) : super(key: key);
-  final String url;
+  const WebViewScreen({super.key, this.url});
+
+  final String? url;
 
   @override
   State<WebViewScreen> createState() => _WebViewScreenState();
@@ -20,7 +21,8 @@ class _WebViewScreenState extends State<WebViewScreen> {
   }
 
   late WebViewController? controllerGlobal;
-  willPopScope() async {
+
+  Future<bool> willPopScope() async {
     if (await controllerGlobal!.canGoBack()) {
       controllerGlobal!.goBack();
       return false;
@@ -33,13 +35,15 @@ class _WebViewScreenState extends State<WebViewScreen> {
   Widget build(BuildContext context) {
     final Completer<WebViewController> controllerCompleter =
         Completer<WebViewController>();
+
     return WillPopScope(
       onWillPop: () => willPopScope(),
       child: Scaffold(
         body: WebView(
           onWebViewCreated: (WebViewController webViewController) {
-            controllerCompleter.future
-                .then((value) => controllerGlobal = value);
+            controllerCompleter.future.then(
+              (value) => controllerGlobal = value,
+            );
             controllerCompleter.complete(webViewController);
           },
           allowsInlineMediaPlayback: true,

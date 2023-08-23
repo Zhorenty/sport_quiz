@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NeedsNetworkWidget extends StatelessWidget {
-  const NeedsNetworkWidget({
-    Key? key,
-  }) : super(key: key);
+class InformationWidget extends StatelessWidget {
+  const InformationWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +9,7 @@ class NeedsNetworkWidget extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(8.0),
         child: Text(
-          'network access is required for the application to work',
+          'Network access is required for the application to work',
           maxLines: 2,
         ),
       ),

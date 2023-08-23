@@ -25,25 +25,23 @@ class QuizBody extends StatelessWidget {
       child: BlocBuilder<QuizBloc, QuizState>(
         builder: (context, state) {
           if (state.status == Status.submissionInProgress) {
-            return const SizedBox();
+            return const SizedBox.shrink();
           }
           if (state.status == Status.submissionSuccess &&
               state.quizList != null) {
             return Column(
               children: [
                 Text(
-                  'your score: ${state.score}',
+                  'Your score: ${state.score}',
                   style: const TextStyle(fontSize: 24),
                 ),
                 Expanded(
-                  child: QuizPageViewBuilder(
-                    quiz: state.quizList!,
-                  ),
+                  child: QuizPageViewBuilder(quiz: state.quizList!),
                 ),
               ],
             );
           }
-          return const Text('something went wrong');
+          return const Text('Something went wrong');
         },
       ),
     );

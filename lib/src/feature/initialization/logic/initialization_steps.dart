@@ -1,8 +1,11 @@
 import 'dart:async';
 
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sport_quiz/src/feature/config/data/config_data_source.dart';
 import 'package:sport_quiz/src/feature/initialization/model/dependencies.dart';
 import 'package:sport_quiz/src/feature/initialization/model/initialization_progress.dart';
+
+import '../../config/data/config_repository.dart';
 
 typedef StepAction = FutureOr<void>? Function(InitializationProgress progress);
 
@@ -15,6 +18,12 @@ mixin InitializationSteps {
     'Shared Preferences': (progress) async {
       final sharedPreferences = await SharedPreferences.getInstance();
       progress.dependencies.sharedPreferences = sharedPreferences;
+    },
+    'Config Repository': (progress) async {
+      final configRepository = ConfigRepositoryImpl(
+        RemoteConfigDataSourceImpl(),
+      );
+      progress.dependencies.configRepository = configRepository;
     },
   };
 }

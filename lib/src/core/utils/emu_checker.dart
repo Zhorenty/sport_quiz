@@ -1,7 +1,7 @@
 import 'package:device_info_plus/device_info_plus.dart';
 
 class EmuCheckerUtil {
-  Future<bool> checkIsEmu() async {
+  static Future<bool> checkIsEmu() async {
     final DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     final AndroidDeviceInfo em = await deviceInfo.androidInfo;
 

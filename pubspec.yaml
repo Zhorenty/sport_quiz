@@ -60,6 +60,7 @@ dependencies:
   firebase_remote_config: ^4.2.5
   connectivity_plus: ^4.0.2
   webview_flutter: ^3.0.4
+  firebase_core: ^2.15.1
 
 
 dev_dependencies:
@@ -81,9 +82,8 @@ flutter:
   # Enable generation of localized Strings from arb files.
   generate: true
 
-  # assets:
-  #   # Add assets from the images directory to the application.
-  #   - assets/images/
+  assets:
+    - assets/question.json
 
 flutter_gen:
   output: lib/src/core/assets/generated

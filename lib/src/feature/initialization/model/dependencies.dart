@@ -1,9 +1,12 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sport_quiz/src/feature/config/data/config_repository.dart';
 
 /// Dependencies container
 abstract interface class Dependencies {
   /// Shared preferences
   abstract final SharedPreferences sharedPreferences;
+
+  abstract final ConfigRepository configRepository;
 
   /// Freeze dependencies, so they cannot be modified
   Dependencies freeze();
@@ -19,8 +22,12 @@ final class Dependencies$Mutable implements Dependencies {
   late SharedPreferences sharedPreferences;
 
   @override
+  late ConfigRepository configRepository;
+
+  @override
   Dependencies freeze() => _Dependencies$Immutable(
         sharedPreferences: sharedPreferences,
+        configRepository: configRepository,
       );
 }
 
@@ -30,10 +37,14 @@ final class Dependencies$Mutable implements Dependencies {
 final class _Dependencies$Immutable implements Dependencies {
   const _Dependencies$Immutable({
     required this.sharedPreferences,
+    required this.configRepository,
   });
 
   @override
   final SharedPreferences sharedPreferences;
+
+  @override
+  final ConfigRepository configRepository;
 
   @override
   Dependencies freeze() => this;

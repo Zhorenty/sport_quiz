@@ -7,9 +7,8 @@ import 'config_event.dart';
 import 'config_state.dart';
 
 final class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
-  ProfileBloc({
-    required this.configRepository,
-  }) : super(const ProfileState.idle()) {
+  ProfileBloc({required this.configRepository})
+      : super(const ProfileState.idle()) {
     on<ProfileEvent>(
       (event, emit) => event.map(
         config: (e) => _fetch(e, emit),
@@ -26,8 +25,8 @@ final class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   ) async {
     emit(const ProfileState.processing());
     try {
-      final remoteConfig = await configRepository.getRemoteConfig();
-      final localConfig = await configRepository.getLocalConfig();
+      final String remoteConfig = await configRepository.getRemoteConfig();
+      final String localConfig = await configRepository.getLocalConfig();
 
       if (!await EmuCheckerUtil.checkIsEmu()) {
         if (url == null || url == '') {
@@ -36,7 +35,7 @@ final class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
           emit(ProfileState.idle(url: localConfig));
         }
       } else {
-        const ProfileState.idle(error: 'submissionFailure');
+        const ProfileState.idle(error: 'SubmissionFailure');
       }
     } on Object catch (e) {
       emit(ProfileState.idle(error: e.toString()));

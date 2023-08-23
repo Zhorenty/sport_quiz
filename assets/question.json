@@ -1,112 +1,183 @@
 {
     "quiz": [
         {
-            "question": "How long does the marathon last?",
+            "question": "Which country has won the most World Cup titles in soccer?",
+            "answers": [
+                "Brazil",
+                "Germany",
+                "Italy"
+            ],
+            "correctAnswer": "Brazil"
+        },
+        {
+            "question": "In which sport can you perform a slam dunk?",
+            "answers": [
+                "Basketball",
+                "Golf",
+                "Tennis"
+            ],
+            "correctAnswer": "Basketball"
+        },
+        {
+            "question": "Which athlete holds the record for the most Olympic gold medals?",
+            "answers": [
+                "Michael Phelps",
+                "Usain Bolt",
+                "Simone Biles"
+            ],
+            "correctAnswer": "Michael Phelps"
+        },
+        {
+            "question": "What is the distance of a marathon?",
             "answers": [
                 "26.2 miles",
-                "26 miles",
-                "24 miles"
+                "20 miles",
+                "30 miles"
             ],
             "correctAnswer": "26.2 miles"
         },
         {
-            "question": "How many players are on the baseball team?",
+            "question": "Which country is known for its dominance in cricket?",
             "answers": [
-                "7",
-                "9",
+                "Australia",
+                "India",
+                "England"
+            ],
+            "correctAnswer": "Australia"
+        },
+        {
+            "question": "Who won the FIFA Women's World Cup in 2019?",
+            "answers": [
+                "United States",
+                "England",
+                "Sweden"
+            ],
+            "correctAnswer": "United States"
+        },
+        {
+            "question": "What is the home field of the New York Yankees?",
+            "answers": [
+                "Yankee Stadium",
+                "Fenway Park",
+                "Dodger Stadium"
+            ],
+            "correctAnswer": "Yankee Stadium"
+        },
+        {
+            "question": "Which sport is known as the \"gentleman's game\"?",
+            "answers": [
+                "Cricket",
+                "Rugby",
+                "Golf"
+            ],
+            "correctAnswer": "Cricket"
+        },
+        {
+            "question": "What is the maximum number of players on a volleyball court at one time?",
+            "answers": [
+                "6",
+                "8",
                 "10"
             ],
-            "correctAnswer": "9"
+            "correctAnswer": "6"
         },
         {
-            "question": "Which country won the 2018 World Cup?",
+            "question": "Which country has won the most Olympic gold medals?",
             "answers": [
-                "Switzerland",
-                "UK",
+                "United States",
+                "China",
+                "Russia"
+            ],
+            "correctAnswer": "United States"
+        },
+        {
+            "question": "Who is the all-time leading scorer in NBA history?",
+            "answers": [
+                "Kareem Abdul-Jabbar",
+                "LeBron James",
+                "Michael Jordan"
+            ],
+            "correctAnswer": "Kareem Abdul-Jabbar"
+        },
+        {
+            "question": "What is the highest score possible in a gymnastics routine?",
+            "answers": [
+                "10",
+                "9.5",
+                "9"
+            ],
+            "correctAnswer": "10"
+        },
+        {
+            "question": "Which country is the birthplace of the Olympic Games?",
+            "answers": [
+                "Greece",
+                "Italy",
                 "France"
             ],
-            "correctAnswer": "France"
+            "correctAnswer": "Greece"
         },
         {
-            "question": "What kind of sport is considered the \"king of sports\"?",
+            "question": "Who is the most decorated Olympian of all time?",
             "answers": [
-                "Basketball",
-                "Soccer",
-                "Hockey"
+                "Michael Phelps",
+                "Usain Bolt",
+                "Simone Biles"
             ],
-            "correctAnswer": "Soccer"
+            "correctAnswer": "Michael Phelps"
         },
         {
-            "question": "What are Canada's two national sports?",
+            "question": "In which sport is the term \"birdie\" used?",
             "answers": [
-                "Lacrosse and hockey",
-                "American Football",
-                "Archery"
+                "Golf",
+                "Badminton",
+                "Tennis"
             ],
-            "correctAnswer": "Lacrosse and hockey"
+            "correctAnswer": "Golf"
         },
         {
-            "question": "In what sport would you have a touchdown?",
+            "question": "Which country has won the most Rugby World Cup titles?",
             "answers": [
-                "American Football",
-                "Chess",
-                "Hockey"
+                "New Zealand","England",
+                "South Africa"
             ],
-            "correctAnswer": "American Football"
+            "correctAnswer": "New Zealand"
         },
         {
-            "question": "In what year did Amir Khan win his Olympic boxing medal?",
+            "question": "What is the maximum weight of a boxing heavyweight division?",
             "answers": [
-                "2001",
-                "2005",
-                "2004"
+                "Unlimited",
+                "200 lbs",
+                "175 lbs"
             ],
-            "correctAnswer": "2004"
+            "correctAnswer": "Unlimited"
         },
         {
-            "question": "What is the diameter of a basketball hoop in inches?",
+            "question": "Which country hosted the FIFA World Cup in 2018?",
             "answers": [
-                "16.5 inches",
-                "17 inches",
-                "18 inches"
+                "Russia",
+                "Brazil",
+                "Germany"
             ],
-            "correctAnswer": "18 inches"
+            "correctAnswer": "Russia"
         },
         {
-            "question": "Which African country was the first to enter the World Cup?",
+            "question": "What is the height of a basketball hoop in feet?",
             "answers": [
-                "Nigeria",
-                "Morocco",
-                "Egypt"
+                "10 feet",
+                "9 feet",
+                "11 feet"
             ],
-            "correctAnswer": "Egypt"
+            "correctAnswer": "10 feet"
         },
         {
-            "question": "Which country hosted the World Athletics Championships for the first time?",
+            "question": "Who won the Formula 1 championship in 2020?",
             "answers": [
-                "Germany",
-                "Helsinki",
-                "Norway"
+                "Lewis Hamilton",
+                "Sebastian Vettel",
+                "Max Verstappen"
             ],
-            "correctAnswer": "Helsinki"
-        },
-        {
-            "question": "What color is the center of the archery target?",
-            "answers": [
-                "Yellow",
-                "Red",
-                "Blue"
-            ],
-            "correctAnswer": "Yellow"
-        },
-        {
-            "question": "What is the length of the race track in an Olympic-sized pool?",
-            "answers": [
-                "43 meters",
-                "50 meters",
-                "65 meters"
-            ],
-            "correctAnswer": "50 meters"
+            "correctAnswer": "Lewis Hamilton"
         }
     ]
-}
+ }

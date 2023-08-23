@@ -10,9 +10,7 @@ class QuizPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: QuizBody(),
-    );
+    return const Scaffold(body: QuizBody());
   }
 }
 
@@ -21,29 +19,28 @@ class QuizBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: BlocBuilder<QuizBloc, QuizState>(
-        builder: (context, state) {
-          if (state.status == Status.submissionInProgress) {
-            return const SizedBox.shrink();
-          }
-          if (state.status == Status.submissionSuccess &&
-              state.quizList != null) {
-            return Column(
-              children: [
-                Text(
-                  'Your score: ${state.score}',
-                  style: const TextStyle(fontSize: 24),
-                ),
-                Expanded(
-                  child: QuizPageViewBuilder(quiz: state.quizList!),
-                ),
-              ],
-            );
-          }
-          return const Text('Something went wrong');
-        },
-      ),
+    return BlocBuilder<QuizBloc, QuizState>(
+      builder: (context, state) {
+        if (state.status == Status.submissionInProgress) {
+          return const SizedBox.shrink();
+        }
+        if (state.status == Status.submissionSuccess &&
+            state.quizList != null) {
+          return Column(
+            children: [
+              const SizedBox(height: 50),
+              Text(
+                'Your score: ${state.score}',
+                style: const TextStyle(fontSize: 24),
+              ),
+              Expanded(
+                child: QuizPageViewBuilder(quiz: state.quizList!),
+              ),
+            ],
+          );
+        }
+        return const Text('Something went wrong');
+      },
     );
   }
 }
